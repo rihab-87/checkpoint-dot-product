@@ -1,0 +1,48 @@
+
+   //enter the number n >=2
+   FUNCTION read_n():integer    
+   VAR
+   n:INTEGER;
+   BEGIN
+   while(n<=2 ) do
+   write("entrer le nombtre n ")
+   read(n);
+   END
+
+   
+    //enter  vector's elements
+   PROCEDURE read_vector(n,VAR T :ARRAY_OF INTEGER[][])
+   VAR
+     i:integer;
+   BEGIN
+    FOR i FROM 0 TO n-1 STEP 1 DO
+     write('enter the',i,'element of the vector');
+      read(T[i]):
+    
+    END_FOR
+   END
+//calculate the dot product of two vectors using a procedure
+PROCEDURE dot_product(n:integer,T1,T2 : ARRAY_OF integer[],VAR p:integer)
+   VAR
+     i:integer;
+   BEGIN
+     FOR i FROM 0 TO n-1 STEP 1 DO
+         p:=p+v1[i]*v2[i];
+     END_FOR
+     write(p);
+   END
+
+ALGORITHM dot_product_vector
+VAR
+ v1,v2 : ARRAY_OF INTEGER[];
+  ps, n:INTEGER;
+  
+BEGIN
+  n:=read_n();// read le nombre n
+  read_vector(n,VAR v1);// read vector v1
+  read_vector(n,VAR v2);// read vector v2
+  dot_product(n,v1,v2,VAR ps);//calculat the dot product of vectors
+   IF (ps=0) THEN
+     write(v1,v2,'orthogonaux');//afficher les vecteurs orthogonaux
+    END_IF
+END
