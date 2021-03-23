@@ -1,6 +1,6 @@
 
    //enter the numbre n >=2
-    FUNCTION read_n():integer    
+  FUNCTION read_n():integer    
    VAR
     n:INTEGER;
    BEGIN
@@ -9,22 +9,22 @@
       read(n);
      END_WHILE
      RETURN n;
-    END
+   END
 
    //enter  vector's elements
-   PROCEDURE read_vector(n,VAR T :ARRAY_OF INTEGER[])
+  PROCEDURE read_vector(n,VAR T :ARRAY_OF INTEGER[])
    VAR
      i:integer;
    BEGIN
-    FOR i FROM 0 TO n-1 STEP 1 DO
-     write('enter the',i,'element of the vector');
-     read(T[i]);
+     FOR i FROM 0 TO n-1 STEP 1 DO
+      write('enter the',i,'element of the vector');
+      read(T[i]);
     
     END_FOR
    END
 
 //calculate the dot product of two vectors using a function
- FUNCTION  dot_product(n:integer,T1,T2 : ARRAY_OF integer[]): p:integer
+  FUNCTION  dot_product(n:integer,T1,T2 : ARRAY_OF integer[]): p:integer
    VAR
      i:integer;
    BEGIN
@@ -34,6 +34,7 @@
      END_FOR
      RETURN p;
    END
+   
 ALGORITHM dot_product_vector
 VAR
  v1,v2 : ARRAY_OF INTEGER[];
