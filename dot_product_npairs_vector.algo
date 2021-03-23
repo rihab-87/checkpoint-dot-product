@@ -2,22 +2,22 @@
    //enter the number n >=2
    FUNCTION read_n():integer    
    VAR
-   n:INTEGER;
+    n:INTEGER;
    BEGIN
-   while(n<=2 ) do
-   write("entrer le nombtre n ")
-   read(n);
-   END
-
-   
+     WHILE (n<=2) DO
+      write("entrer le nombtre n");
+      read(n);
+     END_WHILE
+     RETURN n;
+    END
     //enter  vector's elements
-   PROCEDURE read_vector(n,VAR T :ARRAY_OF INTEGER[][])
+   PROCEDURE read_vector(n,VAR T :ARRAY_OF INTEGER[])
    VAR
      i:integer;
    BEGIN
     FOR i FROM 0 TO n-1 STEP 1 DO
      write('enter the',i,'element of the vector');
-      read(T[i]):
+     read(T[i]):
     
     END_FOR
    END
@@ -27,7 +27,7 @@ PROCEDURE dot_product(n:integer,T1,T2 : ARRAY_OF integer[],VAR p:integer)
      i:integer;
    BEGIN
      FOR i FROM 0 TO n-1 STEP 1 DO
-         p:=p+v1[i]*v2[i];
+         p:=p+T1[i]*T2[i];
      END_FOR
      write(p);
    END
